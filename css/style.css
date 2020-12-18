@@ -276,3 +276,52 @@ img {
     /* esse negócio de nth-child eh para falar com o item 3 do filho do container, com o item 2 do filho do container
      e inverter a ordem */
 }
+
+/* Qualidade */
+
+.qualidade {
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item {
+    flex: 1 1 300px;
+    margin: 20px 10px;
+}
+
+.qualidade-item h2 {
+    font-size: 2.25em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* quero falar com a qualidade-item numero 1 que aparece, especificamente com o H2 e aí com o before do H2,
+3n+1 porque eh para mudar o numero do 1, aí contar mais dois e mudar a cor do terceiro da contagem, começa 
+do numero 1, aí conta mais 3 e muda  */
+.qualidade-item:nth-of-type(3n+1) h2:before {
+    background: #ae81ff;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2:before {
+    background: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2:before {
+    background: #66d9eb;
+}
+
+.qualidade-item p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #7c7c7c;
+}
